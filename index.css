@@ -1,0 +1,50 @@
+.control__input {
+	display: none;
+}
+
+.control {
+	overflow: hidden;
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	cursor: pointer;
+	background-image: linear-gradient(to right, white 35px, transparent 35px),
+		linear-gradient(to right, white 0, white 100px);
+	background-color: black;
+	background-size: 45% 80%, 0 80%;
+	background-repeat: repeat-x, no-repeat;
+	background-position: 10px 10px;
+	transition: all 0.2s linear;
+}
+
+.control:before {
+	position: absolute;
+	content: '';
+	bottom: 100%;
+	left: -155%;
+	width: 300%;
+	height: 50%;
+	background: black;
+	transition: transform 0.2s linear;
+}
+.control:after {
+	position: absolute;
+	content: '';
+	top: 100%;
+	left: -155%;
+	width: 300%;
+	height: 50%;
+	background: black;
+	transition: transform 0.2s linear;
+}
+
+.control__input:checked + .control{
+	background-size: 45% 80%, 50% 80%;
+}
+.control__input:checked + .control:before {
+	transform: rotate(27deg);
+}
+.control__input:checked + .control:after {
+	transform: rotate(-27deg);
+}
