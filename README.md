@@ -1,5 +1,5 @@
 # youtube-buttons
-New Youtube buttons looks cool, so I desided to implement whem with raw CSS
+New Youtube buttons looks cool, so I desided to implement them with raw CSS
 
 [Demo](http://wtfil.github.io/youtube-buttons/)
 
