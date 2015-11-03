@@ -1,4 +1,4 @@
-.control {
+.pause-play {
 	overflow: hidden;
 	display: block;
 	width: 100px;
@@ -15,7 +15,7 @@
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.control:before {
+.pause-play:before {
 	position: absolute;
 	content: '';
 	bottom: 100%;
@@ -25,7 +25,7 @@
 	background: black;
 	transition: transform 0.3s ease-out;
 }
-.control:after {
+.pause-play:after {
 	position: absolute;
 	content: '';
 	top: 100%;
@@ -36,23 +36,25 @@
 	transition: transform 0.3s ease-out;
 }
 
-.control__input {
+.pause-play__input {
 	display: none;
 }
 
-.control__input:checked + .control{
+.pause-play__input:checked + .pause-play{
 	background-size: 45% 80%, 45% 80%;
 }
-.control__input:checked + .control:before {
+.pause-play__input:checked + .pause-play:before {
 	transform: rotate(27deg);
 }
-.control__input:checked + .control:after {
+.pause-play__input:checked + .pause-play:after {
 	transform: rotate(-27deg);
 }
 
 
-.gh-link {
+html, body {
 	font-family: Roboto, arial, sans-serif;
+}
+.gh-link {
 	text-decoration: none;
 	margin-bottom: 20px;
 	font-size: 24px;
